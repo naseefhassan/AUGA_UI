@@ -2,7 +2,7 @@ import Logo from "../../assets/Images/Logo.svg";
 
 function Header() {
   return (
-    <div className="flex items-center h-28   w-full">
+    <div className="flex items-center h-28  w-full">
       <img className="w-32 h-12 mx-4" src={Logo} alt="" />
       <div className="relative w-3/4 ">
         <input

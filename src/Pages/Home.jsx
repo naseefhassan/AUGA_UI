@@ -6,10 +6,10 @@ import BackgroundImg from '../assets/Images/Light_Mode_Background.svg'
 function Home() {
   return (
     <div style={{backgroundImage:`url(${BackgroundImg})`}} className=' w-screen h-screen bg-no-repeat relative flex bg-cover mx-auto '>
-        {/* <div className='flex  justify-between'> */}
-           <div className='w-7/12'> <Header/></div>
-           <div className='w-[515px] absolute right-0 '>  <AppBar/></div>
-        {/* </div> */}
+        <div className='flex justify-between  w-full h-28'>
+           <div className='w-7/12 h-28  '> <Header/></div>
+           <div className=' w-2/5'>  <AppBar/></div>
+        </div>
         {/* <div className='flex absolute bottom-0'>
             <div className='w-10 h-full'><SideBar/></div>
         </div>
