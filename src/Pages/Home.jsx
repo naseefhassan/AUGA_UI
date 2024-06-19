@@ -53,11 +53,14 @@ const contentData = [
 ];
 
 function Home() {
-  const {dark}= useContext(context)
+  const { dark } = useContext(context);
   return (
     <div
-      style={{ backgroundImage: `url(${dark ? DarkBgImg : BackgroundImg})`,backgroundRepeat: "no-repeat",}}
-      className="w-screen h-screen relative flex mx-auto bg-cover"
+      style={{
+        backgroundImage: `url(${dark ? DarkBgImg : BackgroundImg})`,
+        backgroundRepeat: "no-repeat",
+      }}
+      className="w-screen h-screen relative flex  bg-contain md:bg-cover "
     >
       <div className="flex justify-between w-full h-28">
         <div className="w-7/12 h-28">
@@ -67,22 +70,21 @@ function Home() {
           <AppBar />
         </div>
       </div>
-      <div className="flex absolute bottom-0 w-full justify-center">
+      <div className="flex absolute bottom-0 w-full justify-center ">
         <div className="w-10 h-full">
           <SideBar />
         </div>
-        <div className="mx-[130px] flex flex-wrap gap-5 mb-2 ">
-          {contentData.map((item) => (
-            <ContentBox
-              key={item.id} 
-              {...item}
-            />
-          ))}
+        <div className="ml-[100px] flex flex-wrap gap-5 mb-2   ">
+          <div className=" h-[400px] flex flex-wrap gap-2 justify-center overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 ">
+            {contentData.map((item) => (
+              <ContentBox key={item.id} {...item} />
+            ))}
         </div>
+          </div>
       </div>
       <img
         className="w-2/5 absolute right-0 top-[105px]"
-        src={dark ? DarkImage : TopImage }
+        src={dark ? DarkImage : TopImage}
         alt=""
       />
     </div>

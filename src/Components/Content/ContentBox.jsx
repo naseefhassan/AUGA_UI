@@ -4,7 +4,7 @@ import { context } from "../../Context/Theme"
 function ContentBox({id, rate, date, details, className, value, svg}) {
   const {dark} = useContext(context)
   return (
-    <div className={`${dark ? 'bg-black text-white' : 'bg-white'} sm:w-[480px] p-6  rounded-lg opacity-60 flex justify-between z-10`}>
+    <div className={`${dark ? 'bg-black text-white' : 'bg-white'}  sm:w-[530px] p-6 my-3 rounded-lg opacity-60 flex justify-between z-10`}>
         <div className="flex flex-col gap-3"> 
         <div className="flex gap-4">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6 flex">

@@ -22,7 +22,7 @@ function SideBar() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative pt-5">
       <div
         className={`${
           dark ? "bg-[#131416]" : "bg-[#6fccdd]"
@@ -30,7 +30,7 @@ function SideBar() {
           isExpanded ? "w-[162px]" : "w-24"
         } rounded-lg transition-all duration-300`}
       >
-        <div className="flex flex-col justify-evenly items-center w-10 ml-6 text-white font-semibold">
+        <div className="flex flex-col justify-evenly items-center w-10 ml-6  text-white font-semibold">
           <div className="flex items-center gap-3">
             <img
               onClick={handleExpand}

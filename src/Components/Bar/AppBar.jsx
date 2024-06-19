@@ -12,7 +12,7 @@ function AppBar() {
     <div
       className={` ${
         dark ? "bg-[#131416]" : "bg-[#6fccdd]"
-      } flex justify-between items-center p-9 border-4 border-white rounded-xl `}
+      } flex justify-between items-center  p-4 md:p-6 lg:p-8 border-4 border-white rounded-xl `}
     >
       <img className="w-6 cursor-pointer" src={account} alt="" />
       <img className="w-6 cursor-pointer" src={add} alt="" />

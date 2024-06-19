@@ -10,14 +10,12 @@ function UserContext({ children }) {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    console.log("Saved theme from localStorage:", savedTheme);
     if (savedTheme) {
       setDark(savedTheme === "dark");
     }
   }, []);
 
   useEffect(() => {
-    console.log("Setting theme in localStorage:", dark ? "dark" : "light"); // Debugging line
     localStorage.setItem("theme", dark ? "dark" : "light");
   }, [dark]);
 
