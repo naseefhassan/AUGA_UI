@@ -3,9 +3,11 @@ import setting from "../../assets/Images/settings.png";
 import location from "../../assets/Images/rent-a-car.png";
 import logout from "../../assets/Images/logout.png";
 import sheet from "../../assets/Images/sheet.png";
-import line3 from "../../assets/Images/3line.png";
 import { useContext, useState } from "react";
 import { context } from "../../Context/Theme";
+import { Link } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function SideBar() {
   const { dark } = useContext(context);
@@ -13,6 +15,10 @@ function SideBar() {
 
   const handleExpand = () => {
     setIsExpanded((prevState) => !prevState);
+  };
+
+  const handleLogout = () => {
+    toast.success('Successfully Logouted');
   };
 
   return (
@@ -32,7 +38,9 @@ function SideBar() {
               src={menu}
               alt="menu"
             />
-            {isExpanded && <h1 className="cursor-pointer">More</h1>}
+            <Link to={"/more"}>
+              {isExpanded && <h1 className="cursor-pointer">More</h1>}
+            </Link>
           </div>
           <div className="flex items-center gap-3">
             <img
@@ -41,7 +49,9 @@ function SideBar() {
               src={sheet}
               alt="sheet"
             />
-            {isExpanded && <h1 className="cursor-pointer">Details</h1>}
+            <Link to={"/more"}>
+              {isExpanded && <h1 className="cursor-pointer">Details</h1>}
+            </Link>
           </div>
           <div className="flex items-center gap-3">
             <img
@@ -50,7 +60,9 @@ function SideBar() {
               src={location}
               alt="location"
             />
-            {isExpanded && <h1 className="cursor-pointer">Location</h1>}
+            <Link to={"/more"}>
+              {isExpanded && <h1 className="cursor-pointer">Location</h1>}
+            </Link>
           </div>
           <div className="flex items-center gap-3">
             <img
@@ -59,7 +71,9 @@ function SideBar() {
               src={setting}
               alt="setting"
             />
-            {isExpanded && <h1 className="cursor-pointer">Setting</h1>}
+            <Link to={"/more"}>
+              {isExpanded && <h1 className="cursor-pointer">Setting</h1>}
+            </Link>
           </div>
           <div className="flex items-center gap-3">
             <img
@@ -68,10 +82,11 @@ function SideBar() {
               src={logout}
               alt="logout"
             />
-            {isExpanded && <h1 className="cursor-pointer">Logout</h1>}
+             {isExpanded && <h1 onClick={handleLogout} className="cursor-pointer">Logout</h1>} 
           </div>
         </div>
       </div>
+      <ToastContainer/>
     </div>
   );
 }
