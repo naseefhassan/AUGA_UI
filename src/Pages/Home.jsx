@@ -71,7 +71,7 @@ function Home() {
         <div className="w-10 h-full">
           <SideBar />
         </div>
-        <div className="mx-[130px] flex flex-wrap gap-5">
+        <div className="mx-[130px] flex flex-wrap gap-5 mb-2 ">
           {contentData.map((item) => (
             <ContentBox
               key={item.id} 
@@ -81,7 +81,7 @@ function Home() {
         </div>
       </div>
       <img
-        className="w-2/5 absolute right-0 top-[103px]"
+        className="w-2/5 absolute right-0 top-[105px]"
         src={dark ? DarkImage : TopImage }
         alt=""
       />

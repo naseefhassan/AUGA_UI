@@ -6,7 +6,7 @@ import bell from "../../assets/Images/bell.png";
 function AppBar() {
   const { dark, setDark } = useContext(context);
   const handleDarkMode = () => {
-    setDark(!dark);
+    setDark(prevDark => !prevDark);
   };
   return (
     <div
