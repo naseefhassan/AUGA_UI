@@ -58,7 +58,7 @@ function Home() {
     <div
       style={{
         backgroundImage: `url(${dark ? DarkBgImg : BackgroundImg})`,
-        backgroundRepeat: "no-repeat",
+        backgroundRepeat: "no-repeat",background:'url'
       }}
       className="w-screen h-screen relative flex  bg-contain md:bg-cover "
     >

@@ -4,5 +4,17 @@ export default {
   theme: {
     extend: {},
   },
+  build: {
+    rollupOptions: {
+      output: {
+        format: 'es'
+      }
+    }
+  },
+  server: {
+    mimeTypes: {
+      js: 'application/javascript'
+    }
+  },
   plugins: [],
 }
